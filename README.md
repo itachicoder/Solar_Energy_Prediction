@@ -14,11 +14,11 @@ prediction,
 - perform some feature engineering aside of the forecast features,
 - analyze the results and discuss them.
 
-1 Gathering the data
+#Gathering the data
 The data (in netCDF4 format, very popular to manipulate
 weather data) has been provided by International Solar Alliance in several
 files:
-1. weather data, as the values of 15 weather parameters (such as precipitation, maximum temperature, air
+1.weather data, as the values of 15 weather parameters (such as precipitation, maximum temperature, air
 pressure, downward/upward short-wave radiative flux,...)
 forecasted at 5 different hours of the day and provided
 by 11 different ensemble forecast models. This data is
@@ -26,10 +26,10 @@ forecasted for a uniform spatial grid (16 × 9) centered on
 Kamuthi Solar Power Plant and has been collected everyday from
 1994 to 2007 (5113 days) for the training dataset and
 from 2008 to 2012 (1400 days) for the testing dataset.
-2. daily incoming solar energy data, as the total daily incoming solar energy at 98 Kamuthi Solar Power Plant sites (different from the grid points of the weather data from 1994
+2.daily incoming solar energy data, as the total daily incoming solar energy at 98 Kamuthi Solar Power Plant sites (different from the grid points of the weather data from 1994
 to 2007.
 
- Adapt the data to our needs
+#Adapt #the #data #to #our #needs
 For each Kamuthi Solar Power Plant site, we have identified the four closest
 GEFS weather sites. There are then two possible methods to use the data. For each Mesonet site, we
 can either interpolate geographically the weather data from the
