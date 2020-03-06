@@ -14,7 +14,7 @@ prediction,
 - perform some feature engineering aside of the forecast features,
 - analyze the results and discuss them.
 
-#Gathering the data
+# Gathering the data
 The data (in netCDF4 format, very popular to manipulate
 weather data) has been provided by International Solar Alliance in several
 files:
@@ -61,7 +61,7 @@ At this stage, we had weather data for: 98 sites ×5113 days
 This boils down to: 76×4 = 304 features, and 98×5113 =
 501074 samples, for 98×1796 = 176008 predictions to make.
 
-#Understanding the data
+#  Understanding the data
 Before running any algorithm on the massive dataset, we
 wanted to get a grasp on the kind of influence some of the features had on the output. So, we took the weather parameters
 that seemed the most meaningful to us and plotted heat maps.It is not the
@@ -70,7 +70,7 @@ the clouds being more frequent in the East, will also probably
 have high negative correlation with the output. We will verify
 later these correlations.Then, we also wanted to have some more quantitative preanalysis, by measuring the correlation between the factors and the response. Scatterplots were useful in giving a visual estimate of the kind of correlation between them: linear, polynomial, inverse...
 
-#Regression methods
+# Regression methods
 To be able to compare our approach to others’ (Kaggle leaderboard), we have used the MAE3
 formula to calculate the error
 The mean absolute error is commonly used by the renewable
