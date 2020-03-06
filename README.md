@@ -29,7 +29,7 @@ from 2008 to 2012 (1400 days) for the testing dataset.
 2.daily incoming solar energy data, as the total daily incoming solar energy at 98 Kamuthi Solar Power Plant sites (different from the grid points of the weather data from 1994
 to 2007.
 
-#Adapt #the #data #to #our #needs
+# Adapt the data to our needs
 For each Kamuthi Solar Power Plant site, we have identified the four closest
 GEFS weather sites. There are then two possible methods to use the data. For each Mesonet site, we
 can either interpolate geographically the weather data from the
@@ -37,7 +37,7 @@ grid to the Kamuthi Solar Power Plant site, or factor all the features in our al
 
 
 
-Selecting the predictors
+# Selecting the predictors
 Because of the multiple dimensions of the weather data available, we have decided to make some grouping for the data. As
 the output should be the daily expected solar power, for each
 day, site and weather model, we have composed an array of the
@@ -61,7 +61,7 @@ At this stage, we had weather data for: 98 sites ×5113 days
 This boils down to: 76×4 = 304 features, and 98×5113 =
 501074 samples, for 98×1796 = 176008 predictions to make.
 
- Understanding the data
+#Understanding the data
 Before running any algorithm on the massive dataset, we
 wanted to get a grasp on the kind of influence some of the features had on the output. So, we took the weather parameters
 that seemed the most meaningful to us and plotted heat maps.It is not the
@@ -76,7 +76,7 @@ formula to calculate the error
 The mean absolute error is commonly used by the renewable
 energy industry to compare forecast performance. It does not
 excessively punish extreme forecasts.
-#Simple linear regression
+# Simple linear regression
 We started with a simple linear regression to make our first
 predictions. Hence the forecasted daily incoming solar energy
 for each day and Mesonet site was:
@@ -121,7 +121,7 @@ with values around those given in the litterature[2] (Typically
 a good value for m is √p which is around 17 in our case) and
 explored the different learning curves given by models. Eventually, we ran our Random Forests algorithm with 15 predictors on 3000 trees.
 
-#Models comparison
+# Models comparison
 we can see that the most successful models are
 given by using Random Forest methods (6% more accurate
 than linear regression)
